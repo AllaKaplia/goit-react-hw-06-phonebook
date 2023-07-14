@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import contactsDefault from './contactsDefault.json'; 
 import ContactList from "./ContactList";
 import FilterContacts from "./FilterContacts";
@@ -9,6 +10,8 @@ import { Container } from './App.styled';
 
 
 export default function App(){
+  const dispatch = useDispatch();
+
   const [contacts, setContacts] = useState(() => {
     return JSON.parse(window.localStorage.getItem('KEY')) ?? contactsDefault
   });
