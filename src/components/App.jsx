@@ -54,7 +54,7 @@ export default function App() {
   );
 
   useEffect(() => {
-    window.localStorage.setItem('KEY', JSON.stringify(contacts));
+    window.localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   return (
